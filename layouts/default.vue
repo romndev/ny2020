@@ -1,5 +1,15 @@
+<script>
+import Background from "~/components/Background";
+export default {
+  components: {
+    Background,
+  }
+}
+</script>
+
 <template>
   <div>
+    <Background />
     <Nuxt />
   </div>
 </template>
@@ -22,6 +32,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  color: #ffffff;
 }
 
 *,
