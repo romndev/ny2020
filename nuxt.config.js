@@ -18,6 +18,10 @@ export default {
     ]
   },
 
+  router: {
+    base: '/ny2020/'
+  }
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
   ],
