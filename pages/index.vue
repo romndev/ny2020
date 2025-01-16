@@ -2,33 +2,33 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">
-        NY2021
-      </h1>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
+        <NuxtLink
+          to="box"
           class="button--grey"
         >
-          GitHub
-        </a>
+          Открыть подарок
+        </NuxtLink>
       </div>
     </div>
+    <!--Player v-model="play" /-->
   </div>
 </template>
 
 <script>
-export default {}
+import Player from "~/components/Player";
+import Vue from 'vue';
+import vueAwesomeCountdown from 'vue-awesome-countdown';
+Vue.use(vueAwesomeCountdown, 'countdown')
+import Countdown from 'vue-awesome-countdown'
+export default {
+  data: () => ({
+    play: false,
+  }),
+  components: {
+    Player,
+  }
+}
 </script>
 
 <style>
@@ -54,9 +54,10 @@ export default {}
     sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 40px;
   color: #ffffff;
   letter-spacing: 1px;
+  margin-top: 20px;
 }
 
 .subtitle {
@@ -65,6 +66,13 @@ export default {}
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
+}
+
+.button--grey{
+  border-color: white;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 29px;
 }
 
 .links {

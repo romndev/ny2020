@@ -1,5 +1,6 @@
 <script>
 import Background from "~/components/Background";
+import Snow from "~/components/Snow";
 export default {
   components: {
     Background,
@@ -10,6 +11,7 @@ export default {
 <template>
   <div>
     <Background />
+    <Snow />
     <Nuxt />
   </div>
 </template>
