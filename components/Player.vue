@@ -5,7 +5,7 @@ export default {
     playing: false,
   }),
   mounted(){
-    this.audio = new Audio('/audio/6.mp3');
+    this.audio = new Audio('audio/6.mp3');
     this.audio.addEventListener('pause', () => { this.playing = false; });
     this.audio.addEventListener('play', () => { this.playing = true; });
   },
